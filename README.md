@@ -1,13 +1,12 @@
-# ESP32 Dual-OLED Chess Clock ♟️🕒
+# ESP32 Dual-OLED Chess Clock
 
 ![Demo GIF Placeholder](link-to-your-gif-here.gif) *(Tip: Replace this line with a link to a short GIF of the clock working!)*
 
-A dual-screen, competitive chess clock built from scratch using an ESP32, two OLED displays, and arcade microswitches. Designed to bypass hardware I2C limitations by implementing Software I2C to drive multiple identical displays simultaneously without addressing conflicts.
+A dual-screen, competitive chess clock built from scratch using an ESP32, two OLED displays, and arcade microswitches. 
 
 ## Features
 - **Dual Independent Displays**: Uses the U8g2 SW I2C implementation to run two `0.96"` OLEDs that share the same default hardware address.
-- **Dramatic Sub-Minute UI**: Timers automatically switch from `MM:SS` to `SS.d` (tenths of a second) when a player drops under 1 minute for high-pressure endgames.
-- **Active Turn Indicators**: Dynamically displays whose turn it is.
+- **Active Turn Indicators**: Displays whose turn it is.
 - **Internal Hardware Pull-ups**: Uses the ESP32's internal pull-up resistors (`INPUT_PULLUP`) for clean, responsive arcade button presses without needing external resistors.
 
 ## Hardware Required
@@ -15,7 +14,7 @@ A dual-screen, competitive chess clock built from scratch using an ESP32, two OL
 - 2x SSD1306 0.96" I2C OLED Displays (or SH1106 1.3")
 - 2x Arcade Buttons with Microswitches
 - Female-to-Female Jumper Wires
-- *(Optional: 3D Printed Enclosure - CAD files coming soon!)*
+- 3D Printed Chess Clock Enclosure
 
 ## Wiring & Pinout
 | Component | ESP32 Pin | Note |
@@ -34,5 +33,5 @@ This project is built using [PlatformIO](https://platformio.org/).
 1. Clone this repository.
 2. Open the project folder in VS Code with the PlatformIO extension installed.
 3. Build the project and upload it to your ESP32.
-4. Press either arcade button to start the timers!
+4. Press either arcade button to start the timers
 
