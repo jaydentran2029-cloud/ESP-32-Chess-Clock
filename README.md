@@ -7,7 +7,7 @@
 
 
 
-A standalone digital chess clock built using an ESP32, two OLED displays, and arcade microswitches to manage exact match timing.
+A digital chess clock built using an ESP32, two OLED displays, and arcade microswitches.
 
 ## Features & Game Logic
 * **Independent Displays:** Uses the U8g2 SW I2C implementation to run two 0.96" OLEDs that share the same default hardware address.
