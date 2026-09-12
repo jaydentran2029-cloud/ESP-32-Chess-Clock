@@ -1,8 +1,8 @@
 #include <Arduino.h>
 #include <U8g2lib.h>
 
-// By using "SW_I2C" (Software I2C), we can assign the displays to ANY pins we want
-// without worrying about the ESP32's internal hardware conflicts!
+// By using SW_I2C (Software I2C), we can assign the displays to any pins we want
+// without worrying about the ESP32's internal hardware conflicts
 
 // Screen 1 (Player 1)
 // clock (SCL) = 22, data (SDA) = 21
@@ -15,7 +15,7 @@ U8G2_SSD1306_128X64_NONAME_F_SW_I2C screen2(U8G2_R0, /* clock=*/ 33, /* data=*/ 
 #define BTN1_PIN 14
 #define BTN2_PIN 27
 
-// --- Game Settings ---
+// Game Settings 
 long p1_time_ms = 5 * 60 * 1000; // 5 minutes (in milliseconds)
 long p2_time_ms = 5 * 60 * 1000;
 

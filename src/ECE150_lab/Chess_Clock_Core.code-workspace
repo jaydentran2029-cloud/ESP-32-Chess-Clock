@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../../Chess_Clock_Core"
+		},
+		{
+			"name": "OLED_ESP_32",
+			"path": "../.."
+		}
+	],
+	"settings": {}
+}
