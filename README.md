@@ -39,5 +39,5 @@ A standalone digital chess clock built using an ESP32, two OLED displays, and ar
 2. Open the project folder in Visual Studio Code with the **PlatformIO** extension installed.
 3. The OLED displays require the `U8g2` library.
 4. Connect the ESP32 via USB-C.
-5. Click the **Upload** button (the right-pointing arrow `→`) on the bottom PlatformIO status bar to compile and flash the board.
+5. Click the Upload button (the right-pointing arrow `→`) on the bottom PlatformIO status bar to compile and flash the board.
 6. Press either arcade button to start the timers.
