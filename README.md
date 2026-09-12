@@ -1,6 +1,11 @@
 # ESP32 Dual-OLED Chess Clock
 
-[Insert link to GIF or photo here]
+
+<img width="426" height="240" alt="ESP32_Chess_Clock" src="https://github.com/user-attachments/assets/1b57ebbb-23fa-4ccf-83d0-de30a6026a1e" />
+
+
+
+
 
 A standalone digital chess clock built using an ESP32, two OLED displays, and arcade microswitches to manage exact match timing.
 
