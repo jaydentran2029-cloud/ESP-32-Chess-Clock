@@ -49,18 +49,18 @@ void drawTime(U8G2 &screen, long time_ms, bool isActive) {
     // If over a minute, show MM:SS
     sprintf(timeStr, "%d:%02d", minutes, seconds);
   } else {
-    // If under a minute, show SS.d (e.g. 45.2) for a dramatic finish!
+    // If under a minute, show SS.d 
     sprintf(timeStr, "%02d.%d", seconds, tenths); 
   }
 
-  screen.setFont(u8g2_font_logisoso28_tr); // Very large, beautiful font for time
+  screen.setFont(u8g2_font_logisoso28_tr); 
   
-  // Math to center the text perfectly on the screen
+  // Center the text on the screen
   int width = screen.getStrWidth(timeStr);
   int x = (128 - width) / 2;
   screen.drawStr(x, 45, timeStr);
   
-  // Show a tiny indicator of whose turn it is
+  // Show whose turn it is
   if (isActive) {
     screen.setFont(u8g2_font_ncenB08_tr);
     screen.drawStr(25, 60, "YOUR TURN");
@@ -81,7 +81,7 @@ void loop() {
   int btn1 = digitalRead(BTN1_PIN);
   int btn2 = digitalRead(BTN2_PIN);
 
-  // Game Logic: If a player smacks their button, pass the turn to the other player!
+  // If a player presses their button, the next player's turn begins
   if (btn1 == LOW && active_player != 2) {
     active_player = 2; 
   }
@@ -89,7 +89,7 @@ void loop() {
     active_player = 1; 
   }
 
-  // Deduct the exact milliseconds from the active player's clock
+  // Player's clock shows in milliseconds when under a minute left on their clock. 
   if (active_player == 1) {
     p1_time_ms -= delta;
     if (p1_time_ms <= 0) {
@@ -104,7 +104,7 @@ void loop() {
     }
   }
 
-  // Update both screens!
+  // Update both screens
   drawTime(screen1, p1_time_ms, active_player == 1);
   drawTime(screen2, p2_time_ms, active_player == 2);
   }
